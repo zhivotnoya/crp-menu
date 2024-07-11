@@ -80,19 +80,19 @@ namespace vMenuClient.menus
             {
                 playerMenu.AddMenuItem(kill);
             }
-            if (IsAllowed(Permission.OPKick))
-            {
-                playerMenu.AddMenuItem(kick);
-            }
-            if (IsAllowed(Permission.OPTempBan))
-            {
-                playerMenu.AddMenuItem(tempban);
-            }
-            if (IsAllowed(Permission.OPPermBan))
-            {
-                playerMenu.AddMenuItem(ban);
-                ban.LeftIcon = MenuItem.Icon.WARNING;
-            }
+            //if (IsAllowed(Permission.OPKick))
+            //{
+            //    playerMenu.AddMenuItem(kick);
+            //}
+            //if (IsAllowed(Permission.OPTempBan))
+            //{
+            //    playerMenu.AddMenuItem(tempban);
+            //}
+            //if (IsAllowed(Permission.OPPermBan))
+            //{
+            //    playerMenu.AddMenuItem(ban);
+            //    ban.LeftIcon = MenuItem.Icon.WARNING;
+            //}
 
             playerMenu.OnMenuClose += (sender) =>
             {

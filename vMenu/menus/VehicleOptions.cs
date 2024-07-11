@@ -51,10 +51,10 @@ namespace vMenuClient.menus
         public bool VehicleInfiniteFuel { get; private set; } = false;
         public bool VehicleShowHealth { get; private set; } = false;
         public bool VehicleFrozen { get; private set; } = false;
-        public bool VehicleTorqueMultiplier { get; private set; } = false;
-        public bool VehiclePowerMultiplier { get; private set; } = false;
-        public float VehicleTorqueMultiplierAmount { get; private set; } = 2f;
-        public float VehiclePowerMultiplierAmount { get; private set; } = 2f;
+        //public bool VehicleTorqueMultiplier { get; private set; } = false;
+        //public bool VehiclePowerMultiplier { get; private set; } = false;
+        //public float VehicleTorqueMultiplierAmount { get; private set; } = 2f;
+        //public float VehiclePowerMultiplierAmount { get; private set; } = 2f;
 
         private readonly Dictionary<MenuItem, int> vehicleExtras = new();
         #endregion

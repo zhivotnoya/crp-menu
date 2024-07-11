@@ -411,11 +411,11 @@ namespace vMenuClient
 
                     // If the torque multiplier is enabled and the player is allowed to use it.
                     // if (MainMenu.VehicleOptionsMenu.VehicleTorqueMultiplier && IsAllowed(Permission.VOTorqueMultiplier))
-                    {
+                    //{
                         // Set the torque multiplier to the selected value by the player.
                         // no need for an "else" to reset this value, because when it's not called every frame, nothing happens.
                         // SetVehicleEngineTorqueMultiplier(veh.Handle, MainMenu.VehicleOptionsMenu.VehicleTorqueMultiplierAmount);
-                    }
+                    //}
                     // If the player has switched to a new vehicle, and the vehicle engine power multiplier is turned on. Set the new value.
                     if (SwitchedVehicle)
                     {
@@ -455,16 +455,16 @@ namespace vMenuClient
 
                         // Vehicle engine power multiplier. Enable it once the player switched vehicles.
                         // Only do this if the option is enabled AND the player has permissions for it.
-                        if (MainMenu.VehicleOptionsMenu.VehiclePowerMultiplier && IsAllowed(Permission.VOPowerMultiplier))
-                        {
-                            SetVehicleEnginePowerMultiplier(veh.Handle, MainMenu.VehicleOptionsMenu.VehiclePowerMultiplierAmount);
-                        }
+                        //if (MainMenu.VehicleOptionsMenu.VehiclePowerMultiplier && IsAllowed(Permission.VOPowerMultiplier))
+                        //{
+                        //    SetVehicleEnginePowerMultiplier(veh.Handle, MainMenu.VehicleOptionsMenu.VehiclePowerMultiplierAmount);
+                        //}
                         // If the player switched vehicles and the option is turned off or the player has no permissions for it
                         // Then reset the power multiplier ONCE.
-                        else
-                        {
-                            SetVehicleEnginePowerMultiplier(veh.Handle, 1f);
-                        }
+                        //else
+                        //{
+                        //    SetVehicleEnginePowerMultiplier(veh.Handle, 1f);
+                        //}
 
                         // disable this if els compatibility is turned on.
                         if (!GetSettingsBool(Setting.vmenu_use_els_compatibility_mode))

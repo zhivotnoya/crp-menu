@@ -228,36 +228,36 @@ namespace vMenuClient
         /// OnTick loop to keep the weather synced.
         /// </summary>
         /// <returns></returns>
-        private async Task WeatherSync()
-        {
-            await UpdateWeatherParticles();
-            SetArtificialLightsState(IsBlackoutEnabled);
-            if (GetNextWeatherType() != GetHashKey(GetServerWeather))
-            {
-                SetWeatherTypeOvertimePersist(GetServerWeather, (float)WeatherChangeTime);
-                await Delay((WeatherChangeTime * 1000) + 2000);
+        //private async Task WeatherSync()
+        //{
+        //    await UpdateWeatherParticles();
+        //    SetArtificialLightsState(IsBlackoutEnabled);
+        //    if (GetNextWeatherType() != GetHashKey(GetServerWeather))
+        //    {
+        //        SetWeatherTypeOvertimePersist(GetServerWeather, (float)WeatherChangeTime);
+        //        await Delay((WeatherChangeTime * 1000) + 2000);
 
-                TriggerEvent("vMenu:WeatherChangeComplete", GetServerWeather);
-            }
-            await Delay(1000);
-        }
+        //        TriggerEvent("vMenu:WeatherChangeComplete", GetServerWeather);
+        //    }
+        //    await Delay(1000);
+        //}
 
-        /// <summary>
-        /// This function will take care of time sync. It'll be called once, and never stop.
-        /// </summary>
-        /// <returns></returns>
-        private async Task TimeSync()
-        {
-            NetworkOverrideClockTime(GetServerHours, GetServerMinutes, 0);
-            if (IsServerTimeFrozen || IsServerTimeSyncedWithMachineTime)
-            {
-                await Delay(5);
-            }
-            else
-            {
-                await Delay(MathUtil.Clamp(GetServerMinuteDuration, 100, 2000));
-            }
-        }
+        ///// <summary>
+        ///// This function will take care of time sync. It'll be called once, and never stop.
+        ///// </summary>
+        ///// <returns></returns>
+        //private async Task TimeSync()
+        //{
+        //    NetworkOverrideClockTime(GetServerHours, GetServerMinutes, 0);
+        //    if (IsServerTimeFrozen || IsServerTimeSyncedWithMachineTime)
+        //    {
+        //        await Delay(5);
+        //    }
+        //    else
+        //    {
+        //        await Delay(MathUtil.Clamp(GetServerMinuteDuration, 100, 2000));
+        //    }
+        //}
 
         /// <summary>
         /// Set the cloud hat type.
